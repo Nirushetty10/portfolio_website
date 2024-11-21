@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import {Box, AppBar,Toolbar,Button,Container,Typography,MenuItem, Drawer,} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const logoStyle = {
-  width: '75px',
-  height: 'auto',
-  cursor: 'pointer',
-};
-
-function Nav({ mode }) {
+function Nav() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -32,73 +26,68 @@ function Nav({ mode }) {
   };
 
   return (
-    <div>
       <AppBar
         position="fixed"
         sx={{
           boxShadow: 0,
-          bgcolor: 'transparent',
+          bgcolor: '#fff',
           backgroundImage: 'none',
-          borderBottom : '1px solid black'
+          borderBottom : '1px solid black',
         }}
       >
         <Container maxWidth="lg">
           <Toolbar
             variant="regular"
+            sx={{px: '0 !important'}}
           >
             <Box
               sx={{
                 flexGrow: 1,
                 display: 'flex',
                 alignItems: 'center',
-                px: 0,
+                px: '0 !important',
               }}
             >
-              <Typography variant="body1" color="text.primary" sx={{
-                fontWeight: 700,
+              <Typography variant="body1" color="#2C363F" sx={{
                 fontSize:'20px',
+                fontWeight:800,
+                fontFamily:"Karla"
               }}>
                     Niranjan ks.
                   </Typography>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
-                  onClick={() => scrollToSection('home')}
-                  sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     Home
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('Our-services')}
-                  sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     Our Services
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('ChooseUs')}
-                  sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     Why Choose Us
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('plans')}
-                  sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     Plans
                   </Typography>
                 </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     FAQ
                   </Typography>
                 </MenuItem>
@@ -106,10 +95,9 @@ function Nav({ mode }) {
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
                 variant="text"
-                color="primary"
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
-                sx={{ minWidth: '30px', p: '4px' }}
+                sx={{ minWidth: '30px', p: '4px', color: '#2C363F' }}
               >
                 <MenuIcon />
               </Button>
@@ -150,7 +138,6 @@ function Nav({ mode }) {
           </Toolbar>
         </Container>
       </AppBar>
-    </div>
   );
 }
 
