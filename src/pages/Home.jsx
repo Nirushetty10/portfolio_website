@@ -3,10 +3,14 @@ import {
   Button,
   Container,
   Grid2 as Grid,
+  IconButton,
   Typography,
 } from "@mui/material";
 import image from "../assets/my-image.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { motion } from "motion/react"
 import FramerMotion from "../components/FramerMotion";
 
@@ -79,9 +83,31 @@ export default function Home() {
               variant="contained"
               endIcon={<WhatsAppIcon color="green" />}
               sx={{ bgcolor: "#2C363F" }}
+              href="https://wa.me/8217663279?text=Hello Niranjan"
             >
               LET'S TALK
             </Button>
+          </Box>
+          <Box sx={{ mt: 8 }}>
+          <Typography
+              component="h2"
+              variant="subtitle2"
+              color="#2C363F"
+              sx={{ mt: 4 }}
+              fontWeight={800}
+              fontFamily="Karla"
+            >Follow me</Typography>
+            <Box sx={{display: 'flex', gap: 2}}>
+            <IconButton href="https://github.com/Nirushetty10" target="_blank" sx={{p:0}}>
+              <LinkedInIcon style={{color: '#0073B1'}}/>
+              </IconButton>
+              <IconButton href="https://github.com/Nirushetty10" target="_blank" sx={{p:0}}>
+              <GitHubIcon style={{color: '#0e0e0e'}}/>
+              </IconButton>
+              <IconButton href="https://github.com/Nirushetty10" target="_blank" sx={{p:0}}>
+              <InstagramIcon style={{color: '#B801A0'}} />
+              </IconButton>
+            </Box>
           </Box>
         </Grid>
         <Grid item size={{ sm: 12, md: 6 }}>
