@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Box, AppBar,Toolbar,Button,Container,Typography,MenuItem, Drawer,} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { NAME } from '../utils/const-information';
 
 function Nav() {
   const [open, setOpen] = React.useState(false);
@@ -53,7 +54,7 @@ function Nav() {
                 fontWeight:800,
                 fontFamily:"Karla"
               }}>
-                    Niranjan ks.
+                  {NAME}
                   </Typography>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

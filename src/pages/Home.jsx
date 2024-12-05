@@ -13,6 +13,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { motion } from "motion/react"
 import FramerMotion from "../components/FramerMotion";
+import { HomePageInfo } from "../utils/const-information";
+
+const SOCIAL_MEDIA_INFO = [
+  {icon: <LinkedInIcon style={{color: '#0073B1'}}/>, link: HomePageInfo.linkedInLink},
+  {icon: <GitHubIcon style={{color: '#0e0e0e'}}/>, link: HomePageInfo.gitHubLink},
+  {icon: <InstagramIcon style={{color: '#B801A0'}} />, link: HomePageInfo.instaGramLink}
+]
 
 export default function Home() {
   return (
@@ -37,7 +44,7 @@ export default function Home() {
                 fontFamily="Karla"
                 sx={{ mt: 2 }}
               >
-                Hi, I'm Niranjan ks
+                {HomePageInfo.title1}
               </Typography>
             </motion.div>
             <motion.div
@@ -54,7 +61,7 @@ export default function Home() {
               fontFamily="Karla"
               sx={{ mt: 2 }}
             >
-              I’m a MERN Full Stack Web Developer
+              {HomePageInfo.title2}
             </Typography>
             </motion.div>
             <motion.div
@@ -71,10 +78,7 @@ export default function Home() {
               fontWeight={800}
               fontFamily="Karla"
             >
-              A passionate Developer with a strong foundation in building
-              dynamic web applications. I specialize in creating efficient,
-              scalable solutions using MongoDB, Express.js, React, and Node.js.
-              Explore my work and journey here.
+              {HomePageInfo.description}
             </Typography>
             </motion.div>
           </Box>
@@ -83,9 +87,9 @@ export default function Home() {
               variant="contained"
               endIcon={<WhatsAppIcon color="green" />}
               sx={{ bgcolor: "#2C363F" }}
-              href="https://wa.me/8217663279?text=Hello Niranjan"
+              href={`https://wa.me/${HomePageInfo.phoneNumber}?text=${HomePageInfo.whatsAppMessage}`}
             >
-              LET'S TALK
+              {HomePageInfo.buttonText}
             </Button>
           </Box>
           <Box sx={{ mt: 8 }}>
@@ -98,15 +102,11 @@ export default function Home() {
               fontFamily="Karla"
             >Follow me</Typography>
             <Box sx={{display: 'flex', gap: 2}}>
-            <IconButton href="https://github.com/Nirushetty10" target="_blank" sx={{p:0}}>
-              <LinkedInIcon style={{color: '#0073B1'}}/>
-              </IconButton>
-              <IconButton href="https://github.com/Nirushetty10" target="_blank" sx={{p:0}}>
-              <GitHubIcon style={{color: '#0e0e0e'}}/>
-              </IconButton>
-              <IconButton href="https://github.com/Nirushetty10" target="_blank" sx={{p:0}}>
-              <InstagramIcon style={{color: '#B801A0'}} />
-              </IconButton>
+            {SOCIAL_MEDIA_INFO.map((item,index)=> {
+               return <IconButton key={index} href={item.link} target="_blank" sx={{p:0}}>
+                {item.icon}
+               </IconButton>
+            })}
             </Box>
           </Box>
         </Grid>
