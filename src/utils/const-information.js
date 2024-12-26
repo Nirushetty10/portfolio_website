@@ -1,4 +1,4 @@
-export const NAME = "Niranjan ks."
+export const NAME = "<Niranjan ks />"
 
 export const HomePageInfo = {
   title1 : "Hi, I'm Niranjan ks",

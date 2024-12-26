@@ -59,39 +59,40 @@ function Nav() {
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
+                onClick={() => scrollToSection('home')}
                 >
                   <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     Home
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('Our-services')}
+                  onClick={() => scrollToSection('Resume')}
                 >
                   <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
-                    Our Services
+                    Resume
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('ChooseUs')}
+                  onClick={() => scrollToSection('Projects')}
                 >
                   <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
-                    Why Choose Us
+                    Projects
                   </Typography>
                 </MenuItem>
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => scrollToSection('plans')}
                 >
                   <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     Plans
                   </Typography>
-                </MenuItem>
-                <MenuItem
+                </MenuItem> */}
+                {/* <MenuItem
                   onClick={() => scrollToSection('faq')}
                 >
                   <Typography variant="body2" color="#2C363F" fontWeight={800} fontFamily="Karla">
                     FAQ
                   </Typography>
-                </MenuItem>
+                </MenuItem> */}
               </Box>
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
@@ -123,16 +124,16 @@ function Nav() {
                   <MenuItem onClick={() => scrollToSection('home')}>
                     Home
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('Our-services')}>
-                    Our Services
+                  <MenuItem onClick={() => scrollToSection('Resume')}>
+                    Resume
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('ChooseUs')}>
-                    Why Choose Us
+                  <MenuItem onClick={() => scrollToSection('Projects')}>
+                    Projects
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('plans')}>
+                  {/* <MenuItem onClick={() => scrollToSection('plans')}>
                     Plans
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
+                  <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem> */}
                 </Box>
               </Drawer>
             </Box>

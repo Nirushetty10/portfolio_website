@@ -23,7 +23,7 @@ const SOCIAL_MEDIA_INFO = [
 
 export default function Home() {
   return (
-    <Container id="home" maxWidth="lg" sx={{ mt: 10, height: "80vh" }}>
+    <Container id="home" maxWidth="lg" sx={{ mt: 10, minHeight: "80vh" }}>
       <Grid container spacing={4} sx={{ height: "100%" }}>
         <Grid item size={{ sm: 12, md: 6 }}>
           <Box>

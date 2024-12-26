@@ -1,5 +1,7 @@
 import Nav from './components/Nav';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Resume from './pages/Resume';
 
 function App() {
 
@@ -7,6 +9,8 @@ function App() {
     <div>
       <Nav />
       <Home />
+      <Resume />
+      <Projects />
     </div>
   )
 }
